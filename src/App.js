@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState} from 'react'
-//import { Route, Routes, } from 'react-router-dom';
+import { Route, Routes, } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
-//import About from './components/About';
+import About from './components/About';
 
 import Alert from './components/Alert';
 
@@ -45,16 +45,16 @@ function App() {
     <>
       <Navbar title= "TeaxtUtils" aboutText = 'About' mode ={darkMode} toggleMode={toggleMode}/>
       <Alert alert ={alert} />
-     { /*<div>*/}
+      {/* <div>
       <Textform heading = 'Enter the text which u want to convert' mode = {darkMode} showAlert={showAlert}/>
-      {/*<About/>
-     </div> 
+      <About/>
+     </div> */}
      <div>
       <Routes>
           <Route path='/' element={<Textform heading = 'Enter the text which u want to convert' mode = {darkMode} showAlert={showAlert}/>}/>
-          <Route path='/about' element={<About/>} />
+          <Route path='/about' element={<About mode = {darkMode}/>} />
       </Routes>
-      </div>*/} 
+      </div> 
     </>
   );
 }
